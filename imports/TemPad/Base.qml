@@ -6,7 +6,7 @@ Rectangle {
     default property alias contents: clientArea.children
     property alias statusText: statusText.text
     property alias rightSatusText: rightStatusText.text
-    property bool statusVisible: grid.statusVisible
+    property bool statusVisible: true
     color: "black"
     width: Constants.dims.screenWidth
     height: Constants.dims.screenHeight
@@ -52,27 +52,6 @@ Rectangle {
                 }
             }
 
-            Rectangle {
-                id: logo
-                width: (root.statusVisible ? 4 : 7) * Constants.dims.squareDim + 1
-                height: (root.statusVisible ? 2 : 3) * Constants.dims.squareDim + 1
-                y: (14 * Constants.dims.squareDim) + 1
-                anchors.right: parent.right
-                anchors.bottom: grid.bottom
-                color: "black"
-                border.width: 1
-                border.color: Constants.colors.darkestAmber
-
-                Image {
-                    anchors.topMargin: 2
-                    anchors.bottomMargin: 2
-                    anchors.leftMargin: 4
-                    anchors.rightMargin: 4
-                    anchors.fill: parent
-                    source: "images/TimeVarianceAuthorityLogo.png"
-                    fillMode: Image.Stretch
-                }
-            }
         }
 
 
@@ -95,6 +74,7 @@ Rectangle {
             PadText {
                 id: statusText
                 text: "04.12.1985     8021.199 // 1122.991"
+                anchors.verticalCenter: parent.verticalCenter
             }
 
             Row {
@@ -105,6 +85,7 @@ Rectangle {
                     id: rightStatusText
                     text: "E:90.5Gc"
                     font.pixelSize: 8
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
         }
@@ -113,6 +94,30 @@ Rectangle {
             id: clientArea
             anchors.fill: parent
             anchors.margins: 2
+        }
+
+        Frame {
+            id: logo
+            z: 10
+            width: (root.statusVisible ? 4 : 7) * Constants.dims.squareDim + 1
+            height: (root.statusVisible ? 2 : 3) * Constants.dims.squareDim + 1
+            y: (14 * Constants.dims.squareDim) + 1
+            anchors {
+                right: parent.right; bottom: backgroundGrid.bottom;
+                rightMargin: 2; bottomMargin: statusVisible ? Constants.dims.squareDim : 0
+            }
+            border.color: Constants.colors.darkestAmber
+            radius: 0
+
+            Image {
+                anchors.topMargin: 2
+                anchors.bottomMargin: 2
+                anchors.leftMargin: 4
+                anchors.rightMargin: 4
+                anchors.fill: parent
+                source: "images/TimeVarianceAuthorityLogo.png"
+                fillMode: Image.Stretch
+            }
         }
 
     }

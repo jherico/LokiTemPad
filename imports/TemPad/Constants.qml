@@ -8,10 +8,6 @@ QtObject {
     }
 
     readonly property alias fontFamily: fontLoader.name
-    readonly property color amber: "#FFB000"
-    readonly property color darkAmber: "#bf8300"
-    readonly property color darkestAmber: "#7f5700"
-    readonly property color brightAmber: "#ffc340"
 
     readonly property var colors: QtObject {
         readonly property color amber: "#FFB000"
@@ -39,8 +35,4 @@ QtObject {
         readonly property int screenWidth: clientWidth + (frameMargin * 2)
         readonly property int screenHeight: clientHeight + (frameMargin * 2)
     }
-
-
-    readonly property int width: 340
-    readonly property int height: 180
 }

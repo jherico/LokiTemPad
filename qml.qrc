@@ -14,5 +14,6 @@
         <file>imports/TemPad/images/icon_rss.png</file>
         <file>imports/TemPad/fonts/MorePerfectDOSVGA.ttf</file>
         <file>imports/TemPad/images/TimeVarianceAuthorityLogo.png</file>
+        <file>imports/TemPad/perlin.js</file>
     </qresource>
 </RCC>
