@@ -4,7 +4,7 @@ import QtQuick 2.6
 QtObject {
     property FontLoader fontLoader: FontLoader {
         id: fontLoader
-        source: "MorePerfectDOSVGA.ttf"
+        source: "fonts/MorePerfectDOSVGA.ttf"
     }
 
     readonly property alias fontFamily: fontLoader.name
@@ -21,15 +21,16 @@ QtObject {
     }
 
     readonly property var icons: QtObject {
-        readonly property string arrow: "imports/TemPad/icon_arrow.png"
-        readonly property string crosshair: "imports/TemPad/icon_crosshair.png"
-        readonly property string diag: "imports/TemPad/icon_diag.png"
-        readonly property string offset: "imports/TemPad/icon_offset.png"
-        readonly property string rss: "imports/TemPad/icon_rss.png"
+        readonly property string arrow: "images/icon_arrow.png"
+        readonly property string crosshair: "images/icon_crosshair.png"
+        readonly property string diag: "images/icon_diag.png"
+        readonly property string offset: "images/icon_offset.png"
+        readonly property string rss: "images/icon_rss.png"
     }
 
     readonly property var dims: QtObject {
         readonly property int squareSize: 10
+        readonly property int squareDim: squareSize - 1
         readonly property int squaresWidth: 33
         readonly property int squaresHeight: 17
         readonly property int clientWidth: squaresWidth * (squareSize - 1) + 1

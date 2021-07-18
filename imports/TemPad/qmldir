@@ -1,1 +1,5 @@
 singleton Constants 1.0 Constants.qml
+Base 1.0 Base.qml
+Icons 1.0 Icons.qml
+Frame 1.0 Frame.qml
+PadText 1.0 PadText.qml

@@ -3,11 +3,16 @@
         <file>main.qml</file>
         <file>imports/TemPad/Constants.qml</file>
         <file>imports/TemPad/qmldir</file>
-        <file>imports/TemPad/MorePerfectDOSVGA.ttf</file>
-        <file>imports/TemPad/icon_arrow.png</file>
-        <file>imports/TemPad/icon_crosshair.png</file>
-        <file>imports/TemPad/icon_diag.png</file>
-        <file>imports/TemPad/icon_offset.png</file>
-        <file>imports/TemPad/icon_rss.png</file>
+        <file>imports/TemPad/Base.qml</file>
+        <file>imports/TemPad/Icons.qml</file>
+        <file>imports/TemPad/Frame.qml</file>
+        <file>imports/TemPad/PadText.qml</file>
+        <file>imports/TemPad/images/icon_arrow.png</file>
+        <file>imports/TemPad/images/icon_crosshair.png</file>
+        <file>imports/TemPad/images/icon_diag.png</file>
+        <file>imports/TemPad/images/icon_offset.png</file>
+        <file>imports/TemPad/images/icon_rss.png</file>
+        <file>imports/TemPad/fonts/MorePerfectDOSVGA.ttf</file>
+        <file>imports/TemPad/images/TimeVarianceAuthorityLogo.png</file>
     </qresource>
 </RCC>
