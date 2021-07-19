@@ -114,7 +114,7 @@ Window {
                         startX: 0; startY: 7*_unit
                         PathCurve { x: 5 * _unit; y: graph.curveY(5, graph.time); }
                         PathCurve { x: 10 * _unit; y: graph.curveY(10, graph.time); }
-                        PathCurve { x: 15 * _unit; y: graph.curveY(15, graph.time); }
+                        PathCurve { x: 15 * _unit; y: 7 * _unit; }
                         PathCurve { x: 20 * _unit; y: graph.curveY(20, graph.time); }
                         PathCurve { x: 25 * _unit; y: graph.curveY(25, graph.time); }
                         PathCurve { x: 30 * _unit; y: graph.curveY(30, graph.time); }
@@ -131,8 +131,7 @@ Window {
 
                     onPaint: {
                         var ctx = getContext("2d");
-                        ctx.fillStyle = Qt.rgba(0, 0, 0, 1);
-                        ctx.fillRect(0, 0, width, height);
+                        ctx.clearRect(0, 0, width, height);
                         context.strokeStyle = Qt.rgba(.4,.6,.8);
                         context.path = myPath;
                         context.stroke();
