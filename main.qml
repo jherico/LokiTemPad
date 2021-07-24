@@ -1,19 +1,20 @@
-import QtQuick 2.15
-import QtQuick.Window 2.15
+import QtQuick 2.12
+import QtQuick.Window 2.12
 import TemPad 1.0
 
 import "imports/TemPad/perlin.js" as Noise
 
 
 Window {
-    readonly property int scaleFactor: 4
+    readonly property real scaleFactor: 2.64
     readonly property int _unit: Constants.dims.squareDim
     readonly property var _size: Qt.vector2d(Constants.dims.squaresWidth, Constants.dims.squaresHeight)
-    width: 1600
-    height: 800
+    width: 800
+    height: 480
     visible: true
     title: qsTr("TemPad")
-    color: "red"
+    color: "black"
+
 
     Item {
         id: wrapper
@@ -24,6 +25,7 @@ Window {
             id: screen
             anchors.centerIn: parent
             onArrow: statusVisible = !statusVisible
+            //visible: false
 
             Frame {
                 id: timelineStatus
